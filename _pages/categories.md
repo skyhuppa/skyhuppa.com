@@ -11,6 +11,6 @@ permalink: /categories.html
 <ul>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com/Android-News/">Android Open Source Project</a></li>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
-<li><a href="https://jhalon.github.io/breaking-into-cyber-security/">So You Want To Work in Cyber Security?</a></li>
+<li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
 </ul>
