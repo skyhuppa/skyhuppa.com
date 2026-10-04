@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "mint" #"catppuccin_mocha" "air", "aqua", "contrast", "dark", "dirt", "neon", "plum", "sunrise", "catppuccin_latte", "default"
+minimal_mistakes_skin    : "aqua" #"catppuccin_mocha" "air", "mint", "contrast", "dark", "dirt", "neon", "plum", "sunrise", "catppuccin_latte", "default"
 
 # Site Settings
 locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "Mobile Dev" 
 title_separator          : "-"
-subtitle                 : "Build Tools" # site tagline that appears below site title in masthead
+subtitle                 : "Get Updated" # site tagline that appears below site title in masthead
 name                     : "skyhuppa"
 description              : "Keep your mobile device fixed and updated"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -123,10 +123,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-square-envelope"
-      # url: "mailto:your.name@email.com"
+      url: "skyhuppa@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://skyhuppa.wordpress.com/"
     - label: "X-Account"
       icon: "fab fa-fw fa-square-x-twitter"
       # url: "https://twitter.com/"
@@ -152,7 +152,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/skyhuppa"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
