@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : "Adasi Kaakyire"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I.T enthusiast"
   location         : "Kumasi-Ghana"
   email            : "skyhuppa@gmail.com"
@@ -317,6 +317,11 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  build-tools:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -331,4 +336,14 @@ defaults:
       comments: true
       share: true
       related: true
-
+  # _build-tools
+  - scope:
+      path: ""
+      type: build-tools
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
+      related: false
