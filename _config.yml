@@ -19,7 +19,7 @@ locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "Mobile Dev" 
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Build Tools" # site tagline that appears below site title in masthead
 name                     : "skyhuppa"
 description              : "Keep your mobile device fixed and updated"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
