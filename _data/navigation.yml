@@ -1,20 +1,6 @@
 # main links
 main:
-
-  main:
-  - title: "Posts"
-    url: /posts.html
-    
-  - title: "Categories"
-    url: /categories.html
-  
-  - title: "Tools"
-    url: /build-tools
-
-  - title: "About"
-    url: /about.html
-    
-  - title: "site"
+  - title: "check"
     url: https://skyhuppa.wordpress.com/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
