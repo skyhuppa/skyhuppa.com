@@ -9,6 +9,8 @@ permalink: /about.html
 
 ---
 [1] Mobile applications, android image builds, stock and customized android firmware download links. 
+---
 [2] Tutorials.
+---
 [3] Android build releases and news.
 ---
