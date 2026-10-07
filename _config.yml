@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "plum" #"catppuccin_mocha" "air", "mint", "contrast", "aqua", "dirt", "neon", "dark", "sunrise", "catppuccin_latte", "default"
+minimal_mistakes_skin    : "neon" #"catppuccin_mocha" "air", "mint", "contrast", "aqua", "dirt", "plum", "dark", "sunrise", "catppuccin_latte", "default"
 
 # Site Settings
 locale                   : "en-US"
