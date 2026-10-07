@@ -8,6 +8,8 @@ permalink: /about.html
 ---
 
 
+<p align="center"><img src="/images/build_completed_github_actions.jpeg" width="500" height="300"></p>
+
 [1] Mobile applications, android image builds, stock and customized android firmware download links.
 
 
