@@ -7,6 +7,6 @@ header:
 
 
 
-                                                <img src="/assets/images/aosp.png" width="600" height="300">
+ <p align="center"><img src="/assets/images/aosp.png" width="600" height="300"></p>
 
 Effective in 2026, to align with our trunk stable development model and ensure platformstability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, use android-latest-release. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see [Changes to AOSP](https://source.android.com//).
