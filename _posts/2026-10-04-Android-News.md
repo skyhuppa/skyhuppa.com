@@ -13,7 +13,7 @@ date:   2026-10-04 9:31::00 -0800
 
 
 
-<img src="/assets/images/aosp.png"
+<img src="/assets/images/aosp.png" style="width:70%;margin:10px 0;">
 
 
 
