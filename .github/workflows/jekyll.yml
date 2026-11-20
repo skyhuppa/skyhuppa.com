@@ -34,7 +34,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-26.04 ]
-        ruby: [ruby-3.4.13]
+        ruby: [ruby-3.4.9]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v7
@@ -44,8 +44,7 @@ jobs:
         platform=${{ matrix.os }}
         platform=${platform/macos-15-intel/darwin-x64}
         platform=${platform/macos-15/darwin-arm64}
-        platform=${platform/%.04/.04-x64}
-        platform=${platform/%.04-arm/.04-arm64}
+        platform=${platform/%.04/.04-x64}#        platform=${platform/%.04-arm/.04-arm64}
         echo "platform=$platform" >> $GITHUB_OUTPUT
     - name: Set ruby
       id: ruby
@@ -60,13 +59,13 @@ jobs:
  #   - name: Check if already built
  #     run: '! curl -s -L --head --fail https://github.com/ruby/ruby-builder/releases/download/${{ steps.ruby.outputs.tag }}/${{ steps.ruby.outputs.archive }}'
 
- #   - name: Set NO_DOCUMENT
- #     run: |
- #       if [[ "${{ steps.ruby.outputs.ruby }}" == ruby-1.9* ]]; then
- #         echo "NO_DOCUMENT=--no-ri --no-rdoc" >> $GITHUB_ENV
- #       else
- #         echo "NO_DOCUMENT=--no-document" >> $GITHUB_ENV
- #       fi
+    - name: Set NO_DOCUMENT
+      run: |
+        if [[ "${{ steps.ruby.outputs.ruby }}" == ruby-1.9* ]]; then
+          echo "NO_DOCUMENT=--no-ri --no-rdoc" >> $GITHUB_ENV
+        else
+          echo "NO_DOCUMENT=--no-document" >> $GITHUB_ENV
+        fi
 
     - name: Clone ruby-build
       run: git clone https://github.com/rbenv/ruby-build.git
@@ -84,9 +83,9 @@ jobs:
     - run: echo "JAVA_HOME=${JAVA_HOME_21_X64:-${JAVA_HOME_21_arm64:-}}" >> "$GITHUB_ENV"
       if: startsWith(steps.ruby.outputs.ruby, 'jruby-')
 
-    - name: Install system ruby for ruby-2.5.2
+    - name: Install system ruby for ruby-3.4.9
       run: sudo apt-get install -y --no-install-recommends ruby
-      if: startsWith(matrix.os, 'ubuntu') && steps.ruby.outputs.ruby == 'ruby-2.5.2'
+      if: startsWith(matrix.os, 'ubuntu') && steps.ruby.outputs.ruby == 'ruby-3.4.9'
 
     - name: Set PREFIX
       run: |
