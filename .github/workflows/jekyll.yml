@@ -57,16 +57,16 @@ jobs:
         echo "ruby=$ruby" >> $GITHUB_OUTPUT
         echo "tag=$ruby" >> $GITHUB_OUTPUT
         echo "archive=$ruby-${{ steps.platform.outputs.platform }}.tar.gz" >> $GITHUB_OUTPUT
-    - name: Check if already built
-      run: '! curl -s -L --head --fail https://github.com/ruby/ruby-builder/releases/download/${{ steps.ruby.outputs.tag }}/${{ steps.ruby.outputs.archive }}'
+ #   - name: Check if already built
+ #     run: '! curl -s -L --head --fail https://github.com/ruby/ruby-builder/releases/download/${{ steps.ruby.outputs.tag }}/${{ steps.ruby.outputs.archive }}'
 
-    - name: Set NO_DOCUMENT
-      run: |
-        if [[ "${{ steps.ruby.outputs.ruby }}" == ruby-1.9* ]]; then
-          echo "NO_DOCUMENT=--no-ri --no-rdoc" >> $GITHUB_ENV
-        else
-          echo "NO_DOCUMENT=--no-document" >> $GITHUB_ENV
-        fi
+ #   - name: Set NO_DOCUMENT
+ #     run: |
+ #       if [[ "${{ steps.ruby.outputs.ruby }}" == ruby-1.9* ]]; then
+ #         echo "NO_DOCUMENT=--no-ri --no-rdoc" >> $GITHUB_ENV
+ #       else
+ #         echo "NO_DOCUMENT=--no-document" >> $GITHUB_ENV
+ #       fi
 
     - name: Clone ruby-build
       run: git clone https://github.com/rbenv/ruby-build.git
