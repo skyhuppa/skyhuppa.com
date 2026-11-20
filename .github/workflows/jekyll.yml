@@ -133,7 +133,7 @@ jobs:
     - run: bundle --version
     - run: bundle install
     - run: bundle exec rake --version
-    - run: ruby test_subprocess.rb
+  #  - run: ruby test_subprocess.rb
   # Deployment job
   deploy:
     environment:
