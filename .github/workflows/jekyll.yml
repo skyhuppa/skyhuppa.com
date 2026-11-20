@@ -37,6 +37,11 @@ jobs:
         ruby: [ruby-3.4.9]
     runs-on: ${{ matrix.os }}
     steps:
+      runs: |
+        using: 'node24'
+        pre: 'setup.js'
+        main: 'index.js'
+        post: 'cleanup.js'
     - uses: actions/checkout@v7
     - name: Set platform
       id: platform
