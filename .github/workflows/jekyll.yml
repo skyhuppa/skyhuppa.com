@@ -112,27 +112,27 @@ jobs:
       run: echo 'RUBY_CONFIGURE_OPTS=--disable-shared --disable-install-doc' >> $GITHUB_ENV
       if: matrix.os == 'macos-15' && startsWith(steps.ruby.outputs.ruby, 'ruby-3.1')
 
-  #  - name: Build Ruby
-  #    run: ruby-build --verbose ${{ steps.ruby.outputs.ruby }} $PREFIX
-  #    env:
-  #      CPPFLAGS: "-DENABLE_PATH_CHECK=0" # https://github.com/actions/virtual-environments/issues/267
-  #  - name: Create archive
-  #    run: tar czf ${{ steps.ruby.outputs.archive }} -C $(dirname $PREFIX) $(basename $PREFIX)
-  #  - name: Install Bundler if needed
-  #    run: |
-  #      if [ ! -e $PREFIX/bin/bundle ]; then
-  #        export PATH="$PREFIX/bin:$PATH"
-  #        gem install bundler -v '~> 1' $NO_DOCUMENT
-  #      fi
+    - name: Build Ruby
+      run: ruby-build --verbose ${{ steps.ruby.outputs.ruby }} $PREFIX
+      env:
+        CPPFLAGS: "-DENABLE_PATH_CHECK=0" # https://github.com/actions/virtual-environments/issues/267
+    - name: Create archive
+      run: tar czf ${{ steps.ruby.outputs.archive }} -C $(dirname $PREFIX) $(basename $PREFIX)
+    - name: Install Bundler if needed
+      run: |
+        if [ ! -e $PREFIX/bin/bundle ]; then
+          export PATH="$PREFIX/bin:$PATH"
+          gem install bundler -v '~> 1' $NO_DOCUMENT
+        fi
 
-  #  - run: echo "$PREFIX/bin" >> $GITHUB_PATH
-  #  - run: ruby --version
-  #  - run: ruby -ropen-uri -e 'puts URI.send(:open, %{https://rubygems.org/}) { |f| f.read(1024) }'
-  #  - name: Install JSON gem
-  #    run: gem install json -v '2.2.0' $NO_DOCUMENT
-  #  - run: bundle --version
-  #  - run: bundle install
-  #  - run: bundle exec rake --version
+    - run: echo "$PREFIX/bin" >> $GITHUB_PATH
+    - run: ruby --version
+    - run: ruby -ropen-uri -e 'puts URI.send(:open, %{https://rubygems.org/}) { |f| f.read(1024) }'
+    - name: Install JSON gem
+      run: gem install json -v '2.2.0' $NO_DOCUMENT
+    - run: bundle --version
+    - run: bundle install
+    - run: bundle exec rake --version
   #  - run: ruby test_subprocess.rb
 
     - name: Setup Pages
