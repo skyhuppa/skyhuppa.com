@@ -80,7 +80,7 @@ jobs:
       if: startsWith(matrix.os, 'ubuntu') && startsWith(steps.ruby.outputs.ruby, 'ruby-')
     - run: sudo apt-get install -y --no-install-recommends libyaml-dev
       if: startsWith(matrix.os, 'ubuntu') && startsWith(steps.ruby.outputs.ruby, 'truffleruby')
-    - run: echo "JAVA_HOME=${JAVA_HOME_24_X64:-${JAVA_HOME_24_arm64:-}}" >> "$GITHUB_ENV"
+    - run: echo "JAVA_HOME=${JAVA_HOME_26_X64:-${JAVA_HOME_26_arm64:-}}" >> "$GITHUB_ENV"
       if: startsWith(steps.ruby.outputs.ruby, 'jruby-')
 
     - name: Install system ruby for ruby-3.4.9
