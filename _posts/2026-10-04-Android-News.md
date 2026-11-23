@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Android_News: Android Open Source Project"
+title: "Android Update: Android Open Source Project"
 date:   2026-10-04 9:31::00 -0800
 ---
 ![Android 17 preview info->buildreleases](https://github.com/skyhuppa/skyhuppa.com/raw/master/assets/images/aosp.png)

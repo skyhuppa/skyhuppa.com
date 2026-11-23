@@ -9,7 +9,7 @@ permalink: /categories.html
 
 <h2>General</h2>
 <ul>
-<li><a href="https://skyhuppa.github.io/skyhuppa.com/Android-News/">Android Open Source Project</a></li>
+<li><a href="https://skyhuppa.github.io/skyhuppa.com/Android-Update/">Android Open Source Project</a></li>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
 <li><a href="https://skyhuppa.github.io/skyhuppa.com//"></a></li>
